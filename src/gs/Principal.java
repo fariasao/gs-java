@@ -14,7 +14,7 @@ public class Principal {
         do {
             exibirMenu();
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer do scanner
+            scanner.nextLine(); // evistar bug do scanner
 
             switch (opcao) {
             case 1:
@@ -271,7 +271,7 @@ public class Principal {
         // Solicitar a seleção da empresa
         System.out.print("Selecione o número da empresa: ");
         int opcaoEmpresa = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer do scanner
+        scanner.nextLine();
 
         if (opcaoEmpresa < 1 || opcaoEmpresa > empresas.size()) {
             System.out.println("Opção inválida.");
@@ -305,7 +305,7 @@ public class Principal {
 
         System.out.print("Selecione o número da instituição: ");
         int opcaoInstituicao = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer do scanner
+        scanner.nextLine();
 
         if (opcaoInstituicao < 1 || opcaoInstituicao > instituicoes.size()) {
             System.out.println("Opção inválida.");

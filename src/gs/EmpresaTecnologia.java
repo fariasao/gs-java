@@ -95,10 +95,13 @@ public class EmpresaTecnologia {
 
     // sobrecarga do metodo adicionar
     public void adicionarProduto(int codigoProduto, String nome,String descricao, double valorProduto) {
+    	// Cria um novo objeto Produto com os parâmetros fornecidos
         Produto produto = new Produto(codigoProduto, nome, descricao, valorProduto);
+        // Adiciona o produto à lista de produtos da empresa
         produtos.add(produto);
     }
     
+    // Exibe as informações da empresa no console
     public void exibirInformacoes() {
         System.out.println("Nome: " + this.nome);
         System.out.println("Tipo: " + this.tipo);
@@ -110,7 +113,7 @@ public class EmpresaTecnologia {
         System.out.println("Representante: " + this.representante);
     }
 
-    // sobreescrita do metodo exibirInformações
+    // Sobrescrita do método toString()
     public String toString() {
         return "Nome: " + this.nome +
                 "\nTipo: " + this.tipo +

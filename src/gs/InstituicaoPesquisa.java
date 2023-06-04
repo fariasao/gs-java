@@ -93,7 +93,7 @@ public class InstituicaoPesquisa {
         return projetos;
     }
     
-    // Sobrecarga do método adicionarProjeto para receber título e código do projeto
+    // Sobrecarga do método adicionarProjeto para receber o projeto
     public void adicionarProjeto( int codigo, String nome, String descricao, String itensNecessarios) {
         Projeto projeto = new Projeto(codigo, nome, descricao, itensNecessarios);
         projetos.add(projeto);
@@ -101,6 +101,7 @@ public class InstituicaoPesquisa {
 
 
     public String toString() {
+    	// Retorna uma representação em string das informações da instituição
         return "Código da Instituição: " + codigoInstituicao + "\n" +
                "Nome: " + nome + "\n" +
                "Tipo: " + tipo + "\n" +
