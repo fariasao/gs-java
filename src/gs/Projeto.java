@@ -2,18 +2,30 @@ package gs;
 
 public class Projeto {
     private int codigoProjeto;
-    private String titulo;
+    private String nome;
+    private String descricao;
+    private String itensNecessarios;
 
-    public Projeto(int codigoProjeto, String titulo) {
+    public Projeto(int codigoProjeto, String titulo, String descricao, String itensNecessarios) {
         this.codigoProjeto = codigoProjeto;
-        this.titulo = titulo;
+        this.nome = titulo;
+        this.descricao = descricao;
+        this.itensNecessarios = itensNecessarios;
     }
 
     public int getCodigoProjeto() {
         return codigoProjeto;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getNome() {
+        return nome;
     }
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public String getItensNecessarios() {
+		return itensNecessarios;
+	}
 }

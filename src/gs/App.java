@@ -49,5 +49,15 @@ public class App {
     public List<InstituicaoPesquisa> obterInstituicoes() {
         return instituicoes;
     }
+    
+    public EmpresaTecnologia buscarEmpresaPorCnpj(String codigoEmpresa) {
+        for (EmpresaTecnologia empresa : empresas) {
+            if (empresa.getCodigoEmpresa().equals(codigoEmpresa)) {
+                return empresa;
+            }
+        }
+        return null; // Caso não encontre a empresa
+    }
+
 }
 

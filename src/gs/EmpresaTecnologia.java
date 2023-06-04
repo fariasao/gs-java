@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmpresaTecnologia {
-    private int codigoEmpresa;
+    private String codigoEmpresa;
     private String nome;
     private String tipo;
     private String nomeFantasia;
@@ -14,7 +14,7 @@ public class EmpresaTecnologia {
     private String representante;
     private List<Produto> produtos;
 
-    public EmpresaTecnologia(int codigoEmpresa, String nome, String tipo, String nomeFantasia,
+    public EmpresaTecnologia(String codigoEmpresa, String nome, String tipo, String nomeFantasia,
                              String email, String telefone, String endereco, String representante) {
         this.codigoEmpresa = codigoEmpresa;
         this.nome = nome;
@@ -27,7 +27,7 @@ public class EmpresaTecnologia {
         produtos = new ArrayList<>();
     }
 
-    public int getCodigoEmpresa() {
+    public String getCodigoEmpresa() {
         return codigoEmpresa;
     }
 
@@ -93,12 +93,33 @@ public class EmpresaTecnologia {
 
     // Métodos operacionais
 
-    public void realizarAcao(String acao) {
-        System.out.println("Realizando ação: " + acao);
+    // sobrecarga do metodo adicionar
+    public void adicionarProduto(int codigoProduto, String nome,String descricao, double valorProduto) {
+        Produto produto = new Produto(codigoProduto, nome, descricao, valorProduto);
+        produtos.add(produto);
+    }
+    
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Tipo: " + this.tipo);
+        System.out.println("Nome Fantasia: " + this.nomeFantasia);
+        System.out.println("Email: " + this.email);
+        System.out.println("Telefone: " + this.telefone);
+        System.out.println("Endereço: " + this.endereco);
+        System.out.println("Produtos: " + this.produtos.toString());
+        System.out.println("Representante: " + this.representante);
     }
 
-    public void realizarAcao(String acao, String detalhes) {
-        System.out.println("Realizando ação: " + acao + " (" + detalhes + ")");
+    // sobreescrita do metodo exibirInformações
+    public String toString() {
+        return "Nome: " + this.nome +
+                "\nTipo: " + this.tipo +
+                "\nNome Fantasia: " + this.nomeFantasia +
+                "\nEmail: " + this.email +
+                "\nTelefone: " + this.telefone +
+                "\nEndereço: " + this.endereco +
+                "\nProdutos: " + this.produtos.toString() +
+                "\nRepresentante: " + this.representante;
     }
 }
 

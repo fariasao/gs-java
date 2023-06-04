@@ -79,6 +79,8 @@ public class InstituicaoPesquisa {
         this.representante = representante;
     }
 
+    // Métodos operacionais
+    
     public void adicionarProjeto(Projeto projeto) {
         projetos.add(projeto);
     }
@@ -90,11 +92,23 @@ public class InstituicaoPesquisa {
     public List<Projeto> obterProjetos() {
         return projetos;
     }
+    
+    // Sobrecarga do método adicionarProjeto para receber título e código do projeto
+    public void adicionarProjeto( int codigo, String nome, String descricao, String itensNecessarios) {
+        Projeto projeto = new Projeto(codigo, nome, descricao, itensNecessarios);
+        projetos.add(projeto);
+    }
 
-    // Métodos operacionais
 
-    public void realizarAcao(String acao) {
-        System.out.println("Realizando ação: " + acao);
+    public String toString() {
+        return "Código da Instituição: " + codigoInstituicao + "\n" +
+               "Nome: " + nome + "\n" +
+               "Tipo: " + tipo + "\n" +
+               "Nome Fantasia: " + nomeFantasia + "\n" +
+               "Email: " + email + "\n" +
+               "Telefone: " + telefone + "\n" +
+               "Endereço: " + endereco + "\n" +
+               "Representante: " + representante;
     }
 }
 

@@ -61,9 +61,28 @@ public class ProdutorRural {
     }
 
     // Métodos operacionais
+    
+    public void atualizarContato(String email, String telefone) {
+        setEmail(email);
+        setTelefone(telefone);
+    }
 
     public double calcularAreaPlantioTotal(double areaAdicional) {
-        return areaPlantio + areaAdicional;
+        return this.areaPlantio + areaAdicional;
+    }
+    
+    public boolean possuiAreaPlantioMaiorQue(double valor) {
+        return areaPlantio > valor;
+    }
+    
+    public String toString() {
+        return "Código do Produtor: " + codigoProdutor + "\n" +
+               "Nome: " + nome + "\n" +
+               "Tipo: " + tipo + "\n" +
+               "Área de Plantio: " + areaPlantio + "\n" +
+               "Nome Fantasia: " + nomeFantasia + "\n" +
+               "Email: " + email + "\n" +
+               "Telefone: " + telefone;
     }
 }
 
