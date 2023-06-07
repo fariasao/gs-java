@@ -62,15 +62,18 @@ public class ProdutorRural {
 
     // Métodos operacionais
     
+    // atualiza os contatos do produtor
     public void atualizarContato(String email, String telefone) {
         setEmail(email);
         setTelefone(telefone);
     }
 
+    // compara quando produtor tem uma area adicional com a areaPlantio ja feito e soma elas
     public double calcularAreaPlantioTotal(double areaAdicional) {
         return this.areaPlantio + areaAdicional;
     }
     
+    // verificação se o produtor possui area maior do que é preciso
     public boolean possuiAreaPlantioMaiorQue(double valor) {
         return areaPlantio > valor;
     }

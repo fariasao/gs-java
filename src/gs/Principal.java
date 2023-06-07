@@ -85,7 +85,7 @@ public class Principal {
         String nomeProdutor = scanner.nextLine();
         System.out.print("Tipo: ");
         String tipoProdutor = scanner.nextLine();
-        System.out.print("Área de Plantio: ");
+        System.out.print("Área de Plantio:  (em metros / somente numeros)");
         double areaPlantio = scanner.nextDouble();
         scanner.nextLine(); // Limpar o buffer do teclado
         System.out.print("Nome Fantasia: ");

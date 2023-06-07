@@ -81,14 +81,17 @@ public class InstituicaoPesquisa {
 
     // Métodos operacionais
     
+    // adiciona o projeto ao array list
     public void adicionarProjeto(Projeto projeto) {
         projetos.add(projeto);
     }
-
+    
+    // remove o projeto do array list
     public void removerProjeto(Projeto projeto) {
         projetos.remove(projeto);
     }
-
+    
+    // retornar os projetos do array list
     public List<Projeto> obterProjetos() {
         return projetos;
     }

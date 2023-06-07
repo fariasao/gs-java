@@ -50,6 +50,7 @@ public class App {
         return instituicoes;
     }
     
+    // for iterando empresa por empresa para buscar pelo cnpj setado
     public EmpresaTecnologia buscarEmpresaPorCnpj(String codigoEmpresa) {
         for (EmpresaTecnologia empresa : empresas) {
             if (empresa.getCodigoEmpresa().equals(codigoEmpresa)) {
